@@ -99,6 +99,8 @@ if data_choosen == "Upload Data":
 
 df_fetched = get_data_from_list(start_date,end_date,selected_financial_instruments)
 
+selected_financial_instruments = list(selected_financial_instruments)
+
 columns_to_drop = []
 for column in df_fetched.columns:
     if df_fetched[column].isna().sum() > 30:
